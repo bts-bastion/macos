@@ -49,16 +49,19 @@
         creates: /nix/
     # Configure git
     - name: Set Git user name globally
+      become: yes
       community.general.git_config:
         name: user.name
         value: "Blue Thunder Somogyi"
         scope: global
     - name: Set Git user email for a local repository
+      become: yes
       community.general.git_config:
         name: user.email
         value: "bluethunder.somogyi@bastion.com"
         scope: global
     - name: Set Git Editor
+      become: yes
       community.general.git_config:
         name: core.editor
         value: "vim"
