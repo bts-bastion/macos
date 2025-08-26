@@ -17,3 +17,6 @@ ansible-pull -K -d /tmp/bootstrap -i localhost, -e 'ansible_python_interpreter=/
 # ansible-pull -K -d /tmp/bootstrap -i localhost, -e 'ansible_python_interpreter=/usr/bin/python3' -U https://github.com/bts-bastion/macos.git -C "bts/bastion"
 ```
 
+## TODO
+* mise install languages (rust, golang, poetry, python)
+* configure git
