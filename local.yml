@@ -47,7 +47,22 @@
       shell: /bin/bash -c "$(curl -L https://nixos.org/nix/install)"
       args:
         creates: /nix/
-    - name: rustup-init
-      command: /opt/homebrew/bin/rustup-init --no-modify-path -y
+    # Configure git
+    - name: Set Git user name globally
+      community.general.git_config:
+        name: user.name
+        value: "Blue Thunder Somogyi"
+        scope: global
+    - name: Set Git user email for a local repository
+      community.general.git_config:
+        name: user.email
+        value: "bluethunder.somogyi@bastion.com"
+        scope: global
+    - name: Set Git Editor
+      community.general.git_config:
+        name: core.editor
+        value: "vim"
+#    - name: rustup-init
+#      command: /opt/homebrew/bin/rustup-init --no-modify-path -y
     - debug:
         msg: "Now just setup DropBox, run 'mackup restore', and reboot"
