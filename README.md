@@ -19,4 +19,7 @@ ansible-pull -K -d /tmp/bootstrap -i localhost, -e 'ansible_python_interpreter=/
 
 ## TODO
 * mise install languages (rust, golang, poetry, python)
-* configure git
+* configure git (Done)
+* configure git GPG signing
+* install GPG suite
+* capslock-esc swap https://stackoverflow.com/questions/127591/using-caps-lock-as-esc-in-mac-os-x/40254864#40254864 https://apple.stackexchange.com/questions/283252/how-do-i-remap-a-key-in-macos-sierra-e-g-right-alt-to-right-control
